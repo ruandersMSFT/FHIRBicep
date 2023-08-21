@@ -1,3 +1,6 @@
+@description('Do you want to create a new Azure API Management Service or use an existing one?')
+param createApiManagement bool = true
+
 @description('The name of the API Management service instance')
 param apiManagementServiceName string
 
@@ -40,6 +43,7 @@ param appInsightsInstrumentationKey string
 module apimService 'apiManagement/service.bicep' = {
   name: '${apiManagementServiceName}-service'
   params: {
+    createApiManagement: createApiManagement
     apiManagementServiceName: apiManagementServiceName
     location: location
     sku: sku

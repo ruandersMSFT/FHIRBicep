@@ -36,6 +36,9 @@ param FhirAudience string
 
 // start optional configuration parameters
 
+@description('Do you want to create a new Azure API Management Service or use an existing one?')
+param createApiManagement bool = true
+
 @description('Do you want to create a new Azure Health Data Services workspace or use an existing one?')
 param createWorkspace bool = true
 
@@ -221,6 +224,7 @@ module apim './core/apiManagement.bicep'= {
   name: 'apiManagementDeploy'
   scope: rg
   params: {
+    createApiManagement: createApiManagement
     apiManagementServiceName: apimName
     publisherEmail: ApiPublisherEmail
     publisherName: ApiPublisherName
