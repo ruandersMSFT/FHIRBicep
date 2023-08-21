@@ -5,26 +5,32 @@
         "createApiManagement": {
             "value": false
         },
+        "createWorkspace": {
+            "value": false
+        },
+        "createFhirService": {
+            "value": false
+        },
         "name": {
-            "value": "${AZURE_ENV_NAME}"
+            "value": "prod"
         },
         "location": {
-            "value": "${AZURE_LOCATION}"
+            "value": "EastUS2"
         },
         "principalId": {
-            "value": "${AZURE_PRINCIPAL_ID}"
+            "value": "todo"
         },
         "ApiPublisherName": {
-            "value": "${ApiPublisherName=Placeholder Name}"
+            "value": "todo"
         },
         "ApiPublisherEmail": {
-            "value": "${ApiPublisherEmail=youremail@onmicrosoft.com}"
+            "value": "todo@contonso.com"
         },
         "FhirAudience": {
-            "value": "${FhirAudience}"
+            "value": "todo"
         },
         "ContextAppClientId": {
-            "value": "${ContextAppClientId}"
+            "value": "todo"
         }
     }
 }
