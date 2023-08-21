@@ -15,7 +15,7 @@
             "value": "prod"
         },
         "location": {
-            "value": "EastUS2"
+            "value": "eastus2"
         },
         "principalId": {
             "value": "todo"
